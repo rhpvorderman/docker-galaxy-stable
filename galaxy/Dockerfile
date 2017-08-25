@@ -140,7 +140,7 @@ RUN mkdir /shed_tools && chown $GALAXY_USER:$GALAXY_USER /shed_tools && \
     ln -s /tool_deps/ $EXPORT_DIR/tool_deps && chown $GALAXY_USER:$GALAXY_USER $EXPORT_DIR/tool_deps # Configure Galaxy to use the Tool Shed
 
 # The following commands will be executed as User galaxy
-USER galaxy
+USER $GALAXY_USER
 
 WORKDIR $GALAXY_ROOT
 
